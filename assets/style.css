@@ -1,0 +1,122 @@
+/* Основные стили */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    margin: 0 20px;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #003366;
+    margin: 20px 0;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+/* Поля ввода */
+input[type="text"] {
+    box-sizing: content-box;
+    min-width: 100px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #003366;
+    border-radius: 5px;
+}
+
+input[type="text"]:not(:last-child) {
+    margin-right: 20px;
+}
+
+/* Кнопки */
+button {
+    background-color: #003366;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0055a5;
+}
+
+label > input {
+    position: absolute;
+    z-index: -100;
+    opacity: 0;
+}
+
+label {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: inline-block !important;
+    background: white;
+    color: #003366;
+    cursor: pointer;
+}
+
+label > input:checked {
+    position: absolute;
+    opacity: 1;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+input:checked::after {
+    opacity: 1;
+    content: "Выбрано";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #003366;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Слайдер */
+.dcc-slider {
+    margin: 20px auto;
+    width: 80%;
+}
+
+.dcc-slider .rc-slider-track {
+    background-color: #003366;
+}
+
+.dcc-slider .rc-slider-handle {
+    border: 2px solid #003366;
+}
+
+.dcc-slider .rc-slider-mark-text {
+    color: #003366;
+}
+
+/* Графики */
+.dash-graph {
+    border: 2px solid #003366;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.dash-graph + div {
+    display: none;
+}
